@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<body>
+		<style>
+			table {
+				width: 700px;
+				height: 10px;
+			}
+			table,
+			tr,
+			th,
+			td {
+				border: 1px solid black;
+			}
+		</style>
+        <form action="/edit_user/{{update.id}}" method="post">
+
+            <div>
+                <label for="f_name" >First Name: </label>
+                <input type="text" name="f_name" id="" value="{{update.f_name}}" placeholder="{{update.f_name}}">
+            </div>
+            <div>
+                <label for="l_name">Last Name: </label>
+                <input type="text" name="l_name" id="" value="{{update.l_name}}" placeholder="{{update.l_name}}">
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="text" name="email" id="" value="{{update.email}}" placeholder="{{update.email}}">
+            </div>
+            <div>
+                        <button type="submit">update</button>
+            </div>
+        </form>
+
+		<a href="/show_one/{{update.id}}">Show|</a>
+		<a href="">delete|</a>
+		<a href="/">Home</a>
+</body>
+</html>

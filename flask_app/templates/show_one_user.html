@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			table {
+				width: 700px;
+				height: 10px;
+			}
+			table,
+			tr,
+			th,
+			td {
+				border: 1px solid black;
+			}
+		</style>
+		<table>
+			<tr>
+				<th>id</th>
+				<th>full name</th>
+				<th>email</th>
+				<th>created at</th>
+				<th>Action</th>
+			</tr>
+			<tr>
+				<td>{{show_one.id}}</td>
+				<td>{{show_one.f_name}} {{show_one.l_name}}</td>
+				<td>{{show_one.email}}</td>
+				<td>{{show_one.created_at}}</td>
+				<td>
+					<a href="/edit/{{show_one.id}}">update|</a>
+					<a href="/show_one/{{show_one.id}}">delete</a>
+				</td>
+			</tr>
+		</table>
+		<div><a href="/">Home</a></div>
+	</body>
+</html>
